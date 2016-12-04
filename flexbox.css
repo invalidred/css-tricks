@@ -1,0 +1,41 @@
+/*Some important Flexbox ideas*/
+
+/*
+  Flex-direction  |  Main-Axis (justify-content)  |  Cross-Axis (align-items)
+  ---------------------------------------------------------------------------
+  Row             |  Horizontal                   |  Vertical 
+  Column          |  Vertical                     |  Horizontal  
+*/
+
+
+/*Flexbox properties*/
+
+.parent-div { display: flex|inline-flex }
+
+.parent-div { flex-wrap: wrap|no-wrap|wrap-reverse }
+
+.parent-div { flex-direction: row|row-reverse|column|column-reverse }
+
+.parent-div { justify-content: flex-start|center|space-between|flex-end }
+
+.child-div-1 { order: 3 } .child-div-2 { order: 1 } .child-div-3 { order: 2}
+
+.parent-div { align-items: stretch|flex-start|flex-end|center|baseline }
+
+.child-div-1 { flex-grow: 1 }
+
+.child-div-1 { flex-shrink: 0 }
+
+.child-div-1 { flex-basis: auto|%|px|em|rem }
+
+.child-div-1 { align-self: stretch|flex-start|flex-end|center|baseline }
+
+.parent-div { align-content: stretch|flex-start|center|space-between|space-around }
+
+
+
+/*Grouped Flexbox shorthand Properties*/
+
+.child-div-1 { flex: 1 0 47.5% } /*flex = flex-grow flex-shrink flex-basis*/
+
+.parent-div { flex-flow: row nowrap } /*flex-flow = flex-direction flex-wrap*/
