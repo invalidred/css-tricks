@@ -1,0 +1,46 @@
+/* Transition */
+
+.div-1 { background-color: red; transition: background-color 1s .4s; }
+
+.div-1:hover { background-color: green; }
+
+/* Transform */
+
+.x-icon { transition: transform 2s; }
+
+.x-icon:hover { transform: rotate(1turn); }
+
+.x-label { transform: scale(2); transform: scale(2,4); transform: scaleX(2); transform: scaleY(2); }
+
+.x-label { transform-origin: center left; } /* center center default */
+
+.x-label { transform: translate(3px); transform: translateX(3px); transform: translateY(3px); }
+
+/* Key Frames */
+
+@keyframes swing { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-10deg);  }
+} 
+
+@keyframes swing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-10deg); }
+}
+
+#left-arm { animation: swing 2s 0s infinite ease; }
+
+@keyframes fadeIn {
+  from { visibility: 0; opacity: 0; }
+  to { visibility: visible: opacity: 1; }
+}
+
+.modal-overlay.active { animation: fadeIn .25s forwards; } /*Fill-mode default=none forwards='keep last animation frame'*/
+
+/*custom cubic-bezier to case overshoot effect*/
+.modal.active {
+  animation: slideUp .65s .5s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards,
+             fadeIn .65s .5s forwards;
+}
+
+
